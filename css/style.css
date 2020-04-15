@@ -8,6 +8,15 @@ a {
     text-decoration: none;
 }
 
+a h3 {
+    transition: all 0.5s ease-out;
+}
+
+a:hover h3 {
+    color: rgb(26, 203, 57) !important;
+    opacity: 0.8;
+}
+
 li {
     list-style: none;
 }
@@ -25,7 +34,7 @@ body {
     z-index: 900;
 }
 
-.navbar .navbar-nav{
+.navbar-nav{
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -53,10 +62,15 @@ body {
     background: rgb(26, 203, 57);
     margin-top: 4px;
     border-radius: 1px;
+    transition: all 0.5s ease-out;
 }
 
 .navbar .sidebar-btn span:nth-child(1) {
     margin-top: 18px;
+}
+
+.navbar .sidebar-btn:hover span {
+    margin-bottom: 6px;
 }
 
 .main {
@@ -69,7 +83,94 @@ body {
 }
 
 .main .main-content .sidebar {
-    display: none;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    background-color: #fff;
+    transition: left 0.4s linear;
+}
+
+.sidebar .sidebar-close-btn {
+    display: block;
+    width: 25px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-close-btn span {
+    display: block;
+    height: 2px;
+    background: rgb(26, 203, 57);
+    margin-top: 2px;
+    border-radius: 1px;
+    transition: all 0.6s ease-in-out;
+}
+
+.sidebar .sidebar-close-btn span:nth-child(1) {
+    margin-top: 28px;
+    transform: rotateZ(45deg);
+}
+
+.sidebar .sidebar-close-btn span:nth-child(2) {
+    transform: rotateZ(-45deg);
+    margin-top: -2px;
+}
+
+.sidebar .sidebar-close-btn:hover span:nth-child(1) {
+    transform: rotateZ(145deg);
+}
+
+.sidebar .sidebar-close-btn:hover span:nth-child(2) {
+    transform: rotateZ(-145deg);
+}
+
+.sidebar .sidebar-links, 
+.sidebar .sidebar-links ul,
+.sidebar .sidebar-links form {
+    width: 100%;
+}
+
+.sidebar .sidebar-links .sidebar-username {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(246, 166, 35);
+    margin-bottom: 10px;
+}
+
+.sidebar .sidebar-links a {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 2px 0px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7) !important;
+    transition: all 0.3s ease-in;
+}
+
+.sidebar .sidebar-links a:hover {
+    color: rgb(26, 203, 57) !important;
+}
+
+.sidebar .sidebar-links,
+.sidebar .sidebar-links form {
+    padding: 10px 0px;
+}
+
+.sidebar .sidebar-links form input[type=search] {
+    width: 60px;
+    border: none;
+    border: 1px solid #ccc;
+    transition: all 0.6s ease-in-out;
+}
+
+.sidebar .sidebar-links form input[type=search]:focus {
+    width: 120px;
 }
 
 .main .main-content .blog-inner {
@@ -222,7 +323,7 @@ body {
     flex: 1 1 50%;
 }
 
-.main .main-content .blog-inner .blog-inner-main-content  .blog-normal article .article-paragraph {
+.main .main-content .blog-inner .blog-inner-main-content  .blog-normal .article-paragraph {
     display: none;
     height: 100px;
 }
@@ -255,4 +356,218 @@ body {
     display: block;
     width: 90%;
     margin: 0 auto;
+}
+
+/*index Tablet and desktop Design ):*/
+@media only screen and (min-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .main {
+        padding-top: 10px;
+    }
+
+    .main .main-content {
+        display: flex;
+    }
+
+    .main .main-content .sidebar {
+        width: 150px;
+        position: relative;
+        top: 0;
+        left: 0;
+        flex: 1 1 150px;
+    }
+
+    .main .main-content .sidebar .sidebar-close-btn {
+        display: none;
+    }
+
+    .main .main-content .blog-inner {
+        width: calc(100% - 150px);
+        flex: 1 1 calc(100% - 150px);
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1000px) {
+    .main .main-content .blog-inner .blog-inner-top {
+        display: flex;
+    }
+
+    .main .main-content .blog-inner .blog-inner-top .blog-inner-top-main {
+        width: 100%;
+    }
+
+    .main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest {
+        width: 60%;
+    }
+
+    .main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest article {
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .main .main-content .blog-inner .blog-inner-main-content .blog-bigger {
+        display: flex;
+    }
+    
+    .main .main-content .blog-inner .blog-inner-main-content .blog-bigger img {
+        width: 60%;
+        height: 220px;
+        order: 2;
+    }
+
+    .main .main-content .blog-inner .blog-inner-main-content  .blog-bigger article {
+        width: calc(40% - 40px);
+        padding: 0px 20px;
+        order: 1;
+    }
+    
+    .main .main-content .blog-inner .blog-inner-main-content  .blog-bigger article .article-paragraph {
+        display: block;
+        height: 60px;
+    }
+
+    .main .main-content .blog-inner .blog-inner-main-content .blog-normal {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    
+    .main .main-content .blog-inner .blog-inner-main-content .blog-normal article img {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .main .main-content .blog-inner .blog-inner-main-content .blog-normal article {
+        flex: 1 1 calc(33.3% - 20px);
+        padding: 5px 10px;
+    }
+    
+    .main .main-content .blog-inner .blog-inner-main-content  .blog-normal .article-paragraph {
+        display: block;
+        height: 90px;
+    }
+
+    .page-wrapper {
+        display: block;
+        width: 80%;
+    }
+
+}
+
+/*the blog page*/
+.blog {
+    width: 100%;
+}
+
+.blog article img {
+    width: 100%;
+}
+
+.blog .blog-content p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 12px 0px;
+    line-height: 24px;
+}
+
+.blog .blog-content h1,
+.blog .blog-content h2,
+.blog .blog-content h3,
+.blog .blog-content h4,
+.blog .blog-content h5,
+.blog .blog-content h6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 10px 0px;
+    text-align: left !important;
+    color: #111 !important;
+}
+
+.blog .blog-comments,
+.blog .blog-comments form {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.blog .blog-comments .react-comment {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.blog .blog-comments .react-comment h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: left !important;
+    color: #111 !important;
+}
+
+.blog .blog-comments .react-comment .reaction {
+    margin-top: 20px;
+}
+
+.blog .blog-comments .react-comment .reaction img {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.blog .blog-comments form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.blog .blog-comments .comments,
+.blog .blog-comments .comments .comments-contents {
+    width: 100%;
+}
+
+.blog .blog-comments .comments .comments-contents {
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+
+.blog .blog-comments .comments .comments-contents h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    text-align: left !important;
+    color: #111 !important;
+}
+
+.blog .blog-comments .comments .comments-contents .the-comment  {
+    width: calc(100% - 20px);
+    margin: 7px 10px 0px;
+    padding: 12px 0px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.blog .blog-comments .comments .comments-contents .comment-options  {
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+}
+
+.blog .blog-comments .comments .comments-contents .comment-options a {
+    margin: 0px 5px;
+    color: royalblue !important;
+    text-decoration: underline;
+}
+
+.blog .blog-comments .comments .comments-contents .the-comment p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
+    text-align: left !important;
+    color: rgba(0, 0, 0, 0.6) !important;
 }
