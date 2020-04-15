@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #fff;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    z-index: 900;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(26, 203, 57) !important;
+    line-height: 50px;
+}
+
+.navbar .sidebar-btn {
+    display: block;
+    width: 25px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navbar .sidebar-btn span {
+    display: block;
+    height: 2px;
+    background: rgb(26, 203, 57);
+    margin-top: 4px;
+    border-radius: 1px;
+}
+
+.navbar .sidebar-btn span:nth-child(1) {
+    margin-top: 18px;
+}
+
+.main {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.main .main-content {
+    width: 100%;
+}
+
+.main .main-content .sidebar {
+    display: none;
+}
+
+.main .main-content .blog-inner {
+    width: 100%;
+}
+
+.main .main-content .blog-inner .blog-inner-top {
+    width: 100%;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-main {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-main article {
+    width: 100%;
+}
+
+.article-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px 0px;
+    line-height: 24px;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-main article p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.article-paragraph {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.article-author {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-main img{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest {
+    width: 100%;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest article {
+    width: 100%;
+    padding: 7px 0px;
+    border-top: 1px solid #ccc;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest article >* {
+    color: #000;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest article h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.main .main-content .blog-inner .blog-inner-top .blog-inner-top-latest article span {
+    font-size: 11px;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content {
+    width: 100%;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(232, 186, 74);
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content .blog-bigger {
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content .blog-bigger img {
+    width: 100%;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content article .article-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    font-weight: 300 !important;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content  .blog-bigger article .article-paragraph {
+    display: none;
+    height: 60px;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content  article span {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+}
+
+
+.main .main-content .blog-inner .blog-inner-main-content  article .article-author {
+    font-weight: 500;
+}
+
+
+.main .main-content .blog-inner .blog-inner-main-content  article .article-date {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.main .main-content .blog-inner .blog-inner-main-content .blog-normal {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content .blog-normal article img {
+    width: 130px;
+    margin-top: 10px;
+    float: right;
+}
+
+@media only screen and (max-width: 259px) {
+    .main .main-content .blog-inner .blog-inner-main-content .blog-normal article img {
+        float: left;
+    }
+}
+
+.main .main-content .blog-inner .blog-inner-main-content .blog-normal article {
+    flex: 1 1 50%;
+}
+
+.main .main-content .blog-inner .blog-inner-main-content  .blog-normal article .article-paragraph {
+    display: none;
+    height: 100px;
+}
+
+.btn-load {
+    display: block;
+    border: none;
+    color: #fff;
+    margin: 10px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(26, 203, 57);
+}
+
+.footer {
+    height: 120px;
+    background-color: rgb(241, 241, 241);
+}
+
+.footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 120px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
